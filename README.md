@@ -52,7 +52,7 @@
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/ВАШ_ПРОЕКТ/RxJavaSF.git
+   git clone https://github.com/yujihn/rxJava.git
    cd RxJavaSF
    ```
 

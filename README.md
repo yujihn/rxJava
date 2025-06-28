@@ -133,13 +133,13 @@ RxJavaSF/
 ---
 
 ## Планировщики потоков
-
+```
 | Планировщик          | Реализация                 | Назначение                   |
 |----------------------|----------------------------|------------------------------|
 | IOThreadScheduler    | CachedThreadPool           | Для I/O и сетевых операций   |
 | ComputationScheduler | FixedThreadPool            | Для CPU-интенсивных задач    |
 | SingleThreadScheduler| SingleThreadExecutor       | Последовательная обработка   |
-
+```
 ---
 
 ## Тестирование
@@ -158,7 +158,7 @@ mvn test
 ---
 
 ## Примеры использования
-
+```
 // map + filter с планировщиками
 Map.apply(
 Observable.just(1, 2, 3, 4, 5),
@@ -177,3 +177,4 @@ FlatMap.apply(
 Observable.just("A", "B"),
 s -> Observable.just(s + "1", s + "2")
 ).subscribe(System.out::println);
+```

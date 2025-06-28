@@ -40,7 +40,7 @@
 
 ## Технологии
 
-- Java 17+
+- Java 23
 - Maven
 - SLF4J + Log4j 2
 - JUnit 5
@@ -71,8 +71,8 @@
 ---
 
 ## Структура проекта
-Copy
-plaintext
+
+```
 RxJavaSF/
 ├── .idea/ # Конфигурация IDE
 ├── logs/
@@ -116,7 +116,7 @@ RxJavaSF/
 ├── .gitignore
 ├── pom.xml
 └── README.md
-
+```
 ---
 
 ## Архитектура и принципы
@@ -134,11 +134,11 @@ RxJavaSF/
 
 ## Планировщики потоков
 
-| Планировщик           | Реализация                 | Назначение                  |
-|----------------------|----------------------------|-----------------------------|
-| IOThreadScheduler    | CachedThreadPool            | Для I/O и сетевых операций   |
-| ComputationScheduler | FixedThreadPool             | Для CPU-интенсивных задач    |
-| SingleThreadScheduler| SingleThreadExecutor        | Последовательная обработка   |
+| Планировщик          | Реализация                 | Назначение                   |
+|----------------------|----------------------------|------------------------------|
+| IOThreadScheduler    | CachedThreadPool           | Для I/O и сетевых операций   |
+| ComputationScheduler | FixedThreadPool            | Для CPU-интенсивных задач    |
+| SingleThreadScheduler| SingleThreadExecutor       | Последовательная обработка   |
 
 ---
 
@@ -152,15 +152,13 @@ RxJavaSF/
 - Обработку ошибок и отмену подписок
 
 Запуск тестов:
-Copy
-bash
+```
 mvn test
-
+```
 ---
 
 ## Примеры использования
-Copy
-java
+
 // map + filter с планировщиками
 Map.apply(
 Observable.just(1, 2, 3, 4, 5),

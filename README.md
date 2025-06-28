@@ -208,3 +208,34 @@ Observable.just("M", "N"),
 Observable.just("O")
 ).subscribe(s -> System.out.println("concat: " + s));
 ```
+## Пример логирования
+```
+2025-06-28T22:02:34,757 [main] INFO  c.m.Main - Пример map и filter с планировщиками:
+2025-06-28T22:02:34,772 [pool-3-thread-4] INFO  c.m.Main - Completed
+
+2025-06-28T22:02:34,773 [pool-3-thread-3] INFO  c.m.Main - Received: 50
+2025-06-28T22:02:34,773 [pool-3-thread-1] INFO  c.m.Main - Received: 30
+2025-06-28T22:02:34,773 [pool-3-thread-2] INFO  c.m.Main - Received: 40
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - Пример flatMap:
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 1
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 1
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 2
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 4
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 3
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 9
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 4
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 16
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 5
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - flatMap: 25
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - 
+Пример merge:
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - merge: A
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - merge: B
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - merge: 1
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - merge: 2
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - 
+Пример concatenation:
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - concatenation: X
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - concatenation: Y
+2025-06-28T22:02:35,274 [main] INFO  c.m.Main - concatenation: Z
+```
